@@ -1,0 +1,53 @@
+---
+title: "Downloads per Month"
+author: "Bastiaan Quast"
+date: "Wednesday, November 26, 2014"
+output: md_document
+---
+
+
+```{r}
+library(installr)
+```
+
+You can also embed plots, for example:
+
+```{r}
+month <- "October"
+month_dir <- paste( getwd(), month, sep='/')
+```
+
+```{r, cache=TRUE, echo=FALSE}
+October <- download_RStudio_CRAN_data(START = '2014-10-01', END = '2014-10-31', log_folder = month_dir )
+```
+
+```{r, echo=FALSE}
+my_RStudio_CRAN_data <- read_RStudio_CRAN_data(month_dir)
+```
+
+```{r}
+barplot_package_users_per_day("decompr", my_RStudio_CRAN_data)
+```
+
+```{r}
+library(installr)
+```
+
+You can also embed plots, for example:
+
+```{r}
+month <- "November"
+month_dir <- paste( getwd(), month, sep='/')
+```
+
+```{r, cache=TRUE, echo=FALSE}
+November <- download_RStudio_CRAN_data(START = '2014-11-01', END = '2014-11-30', log_folder = month_dir )
+```
+
+```{r, echo=FALSE}
+my_RStudio_CRAN_data <- read_RStudio_CRAN_data(month_dir)
+```
+
+```{r}
+barplot_package_users_per_day("decompr", my_RStudio_CRAN_data)
+```
