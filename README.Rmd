@@ -13,12 +13,12 @@ library(installr)
 You can also embed plots, for example:
 
 ```{r}
-month <- "October"
+month <- "December"
 month_dir <- paste( getwd(), month, sep='/')
 ```
 
 ```{r, cache=TRUE, echo=FALSE}
-October <- download_RStudio_CRAN_data(START = '2014-10-01', END = '2014-10-31', log_folder = month_dir )
+December <- download_RStudio_CRAN_data(START = '2014-12-01', END = '2014-12-31', log_folder = month_dir )
 ```
 
 ```{r, echo=FALSE}
